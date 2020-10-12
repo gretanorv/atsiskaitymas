@@ -20,7 +20,7 @@
     line-height: 1.5;
     text-align: $align;
 
-    @include mobile {
+    @include mq-until(md) {
         font-size: rem-calc($mobile-size);
         line-height: 1.93;
         text-align: center;
@@ -41,7 +41,7 @@
     color: $color;
     line-height: $height;
 
-    @include mobile() {
+    @include mq-until(md) {
         font-size: rem-calc($mobile-size);
         text-align: center;
     }

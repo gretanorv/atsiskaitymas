@@ -6,14 +6,14 @@
     padding: 22px 10%;
     margin: 0 auto;
 
-    @include mobile {
+    @include mq-until(md) {
         padding: 15px;
     }
 
     &__logo {
         width: 72px;
 
-        @include mobile {
+        @include mq-until(md) {
             width: 62px;
         }
     }
@@ -23,7 +23,11 @@
         display: flex;
         justify-content: space-evenly;
 
-        @include mobile {
+        @include mq-until(lg) {
+            display: none;
+        }
+
+        @include mq-until(md) {
             display: none;
         }
 
@@ -42,7 +46,12 @@
     &__menu {
         display: none;
 
-        @include mobile {
+        @include mq-until(lg) {
+            display: inline;
+            width: 50px;
+        }
+
+        @include mq-until(md) {
             display: inline;
             width: 50px;
         }

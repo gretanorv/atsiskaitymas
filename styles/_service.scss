@@ -1,7 +1,7 @@
 .service {
     padding: 0 10%;
 
-    @include mobile {
+    @include mq-until(md) {
         padding: 0 24px;
         margin-bottom: 52px;
     }
@@ -22,7 +22,7 @@
             margin-top: 95px;
             margin-bottom: 34px;
 
-            @include mobile {
+            @include mq-until(md) {
                 margin-top: 52px;
                 margin-bottom: 30px;
             }
@@ -33,7 +33,7 @@
             margin-bottom: 116px;
             max-width: 718px;
 
-            @include mobile {
+            @include mq-until(md) {
                 margin-bottom: 72px;
             }
         }
@@ -44,7 +44,11 @@
         align-items: center;
         justify-content: space-evenly;
 
-        @include mobile {
+        @include mq-until(lg) {
+            flex-wrap: wrap;
+        }
+
+        @include mq-until(md) {
             flex-direction: column;
             padding: 0 40px;
         }

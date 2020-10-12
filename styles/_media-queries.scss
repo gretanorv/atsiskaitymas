@@ -1,7 +1,18 @@
 $breakpoint-md: 768px;
 
-@mixin mobile($screen-size: $breakpoint-md) {
+@mixin mq($screen-size: $breakpoint-md) {
     @media (max-width: #{$screen-size}) {
+        @content;
+    }
+}
+
+$breakpoints: (
+    lg: 1050px,
+    md: 768px,
+);
+
+@mixin mq-until($size-name, $breakpoints-map: $breakpoints) {
+    @media (max-width: map-get($breakpoints-map, $size-name) - 1) {
         @content;
     }
 }
