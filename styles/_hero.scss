@@ -1,0 +1,47 @@
+.hero {
+    background-image: url("../../../img/background.jpg");
+    background-size: cover;
+    background-position: center;
+
+    @include mobile {
+        background-image: none;
+        background: linear-gradient(180deg, $white 48.96%, $white-three 100%);
+    }
+
+    &__content {
+        padding: 0 10%;
+        padding-bottom: 112px;
+
+        @include mobile {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            padding: 0 23px 60px;
+        }
+
+        &-title {
+            @include title;
+            margin-top: 196px;
+            margin-bottom: 30px;
+            max-width: 548px;
+
+            @include mobile {
+                margin-top: 30px;
+            }
+        }
+
+        &-text {
+            @include text;
+            margin-bottom: 30px;
+            max-width: 751px;
+
+            @include mobile {
+                margin-bottom: 32px;
+            }
+        }
+
+        &-btn {
+            @include button;
+        }
+    }
+}

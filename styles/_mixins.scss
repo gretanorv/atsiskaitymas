@@ -1,0 +1,15 @@
+@mixin button {
+    background-color: $light-grey-blue;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 16px 66px;
+    transition: all ease 0.3s;
+
+    @include text($color: $white, $weight: 600);
+
+    &:hover,
+    &:focus {
+        background-color: darken($light-grey-blue, 20%);
+    }
+}

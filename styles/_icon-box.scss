@@ -1,0 +1,24 @@
+.icon-box {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    &__icon {
+        margin-bottom: 21px;
+        width: 65px;
+    }
+
+    &__title {
+        @include title($size: 22px, $family: $Poppins, $weight: 500, $height: 1.82, $mobile-size: 22px);
+        margin-bottom: 12px;
+    }
+
+    &__text {
+        @include text($size: 16px, $color: $battleship-grey-three, $align: center, $mobile-size: 16px);
+        margin-bottom: 191px;
+
+        @include mobile {
+            margin-bottom: 51px;
+        }
+    }
+}

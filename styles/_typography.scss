@@ -1,0 +1,48 @@
+@mixin link {
+    font-family: $Poppins;
+    font-size: rem-calc(18px);
+    text-decoration: none;
+    font-weight: 500;
+    color: $battleship-grey;
+    transition: all ease 0.3s;
+
+    &:hover,
+    &:focus {
+        color: darken($battleship-grey, 30%);
+    }
+}
+
+@mixin text($size: 18px, $color: $battleship-grey-two, $weight: 400, $align: none, $mobile-size: 14px) {
+    color: $color;
+    font-size: rem-calc($size);
+    font-family: $Poppins;
+    font-weight: $weight;
+    line-height: 1.5;
+    text-align: $align;
+
+    @include mobile {
+        font-size: rem-calc($mobile-size);
+        line-height: 1.93;
+        text-align: center;
+    }
+}
+
+@mixin title(
+    $family: $DMSerifDisplay,
+    $size: 56px,
+    $weight: 400,
+    $color: $battleship-grey-two,
+    $height: 1,
+    $mobile-size: 32px
+) {
+    font-family: $family;
+    font-size: rem-calc($size);
+    font-weight: $weight;
+    color: $color;
+    line-height: $height;
+
+    @include mobile() {
+        font-size: rem-calc($mobile-size);
+        text-align: center;
+    }
+}

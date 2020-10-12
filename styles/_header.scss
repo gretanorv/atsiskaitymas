@@ -1,0 +1,50 @@
+.header {
+    align-items: center;
+    background-color: $pinkish-grey-10;
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 10%;
+    margin: 0 auto;
+
+    @include mobile {
+        padding: 15px;
+    }
+
+    &__logo {
+        width: 72px;
+
+        @include mobile {
+            width: 62px;
+        }
+    }
+
+    &__nav {
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+
+        @include mobile {
+            display: none;
+        }
+
+        &-item {
+            &-link {
+                @include link;
+                padding-right: 58px;
+            }
+        }
+
+        &-btn {
+            @include button;
+        }
+    }
+
+    &__menu {
+        display: none;
+
+        @include mobile {
+            display: inline;
+            width: 50px;
+        }
+    }
+}
